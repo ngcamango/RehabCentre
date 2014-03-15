@@ -62,6 +62,15 @@ public class Nurse implements Person{
             return this;
         }
         
+        public Builder nurse(Nurse value){
+            name = value.getName();
+            surname = value.getSurname();
+            age = value.getAge();
+            hoursWorked = value.getHoursWorked();
+            salary = value.getSalary();
+            return this;
+        }
+        
         public Nurse build()
         {
             return new Nurse(this);

@@ -69,6 +69,16 @@ public class Progress {
             return this;
         }
         
+        public Builder progress(Progress value){
+            name=value.getName();
+            surname= value.getSurname();
+            age=value.getAge();
+            diagnosis=value.getDiagnosis();
+            weeksLeft=value.getWeeksLeft();
+            progress=value.getProgress();
+            return this;
+        }
+        
         public Progress build()
         {
             return new Progress(this);

@@ -6,6 +6,7 @@
 
 package com.ngcamango.rehabcentre.model;
 
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -17,6 +18,7 @@ public final class Patient implements Person{
     private String name;
     private String surname;
     private int age;
+    private List<ActivityLog> activity;
     
     private Patient()
     {
@@ -28,6 +30,7 @@ public final class Patient implements Person{
         name=builder.name;
         surname= builder.surname;
         age=builder.age;
+        activity=builder.activity;
     }
     
     public static class Builder
@@ -35,6 +38,7 @@ public final class Patient implements Person{
         private String name;
         private String surname;
         private int age;
+        private List<ActivityLog> activity;
         
         public Builder(String name) {
             this.name = name;
@@ -47,6 +51,19 @@ public final class Patient implements Person{
 
         public Builder age(int value){
             age=value;
+            return this;
+        }
+        
+        public Builder activity(List<ActivityLog> value){
+            activity=value;
+            return this;
+        }
+        
+        public Builder patient(Patient value){
+            name=value.getName();
+            surname= value.getSurname();
+            age=value.getAge();
+            activity=value.getActivity();
             return this;
         }
         
@@ -66,6 +83,10 @@ public final class Patient implements Person{
 
     public int getAge() {
         return age;
+    }
+    
+    public List<ActivityLog> getActivity() {
+        return activity;
     }
     
     public boolean isMinor() {

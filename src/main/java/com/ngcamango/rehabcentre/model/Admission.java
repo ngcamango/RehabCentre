@@ -69,6 +69,16 @@ public class Admission {
             return this;
         }
         
+        public Builder admission(Admission value){
+            name=value.getName();
+            surname= value.getSurname();
+            age=value.getAge();
+            diagnosis=value.getDiagnosis();
+            weeks=value.getWeeks();
+            fee=value.getFee();
+            return this;
+        }
+        
         public Admission build()
         {
             return new Admission(this);

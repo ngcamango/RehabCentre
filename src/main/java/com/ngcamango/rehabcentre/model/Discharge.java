@@ -61,6 +61,15 @@ public class Discharge {
             return this;
         }
         
+        public Builder discharge(Discharge value){
+            name=value.getName();
+            surname= value.getSurname();
+            age=value.getAge();
+            diagnosis=value.getDiagnosis();
+            weeks=value.getWeeks();
+            return this;
+        }
+        
         public Discharge build()
         {
             return new Discharge(this);

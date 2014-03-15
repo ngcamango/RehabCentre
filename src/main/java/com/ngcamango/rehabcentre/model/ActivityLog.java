@@ -61,6 +61,15 @@ public class ActivityLog {
             return this;
         }
         
+        public Builder activityLog(ActivityLog value){
+            name=value.getName();
+            surname= value.getSurname();
+            age=value.getAge();
+            diagnosis=value.getDiagnosis();
+            activity=value.getActivity();
+            return this;
+        }
+        
         public ActivityLog build()
         {
             return new ActivityLog(this);

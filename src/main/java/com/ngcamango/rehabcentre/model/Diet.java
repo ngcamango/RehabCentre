@@ -61,6 +61,15 @@ public class Diet {
             return this;
         }
         
+        public Builder diet(Diet value){
+            name=value.getName();
+            surname= value.getSurname();
+            age=value.getAge();
+            diagnosis=value.getDiagnosis();
+            foodType=value.getFoodType();
+            return this;
+        }
+        
         public Diet build()
         {
             return new Diet(this);

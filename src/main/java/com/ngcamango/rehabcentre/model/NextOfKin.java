@@ -52,6 +52,14 @@ public class NextOfKin implements Person{
             return this;
         }
         
+        public Builder nextOfKin(NextOfKin value){
+            name=value.getName();
+            surname= value.getSurname();
+            age=value.getAge();
+            relationship=value.getRelationship();
+            return this;
+        }
+        
         public NextOfKin build()
         {
             return new NextOfKin(this);

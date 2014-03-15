@@ -70,6 +70,16 @@ public class Assessment {
             return this;
         }
         
+        public Builder assessment(Assessment value){
+            name=value.getName();
+            surname= value.getSurname();
+            age=value.getAge();
+            diagnosis=value.getDiagnosis();
+            weeksAssessed=value.getWeeksAssessed();
+            progress=value.getProgress();
+            return this;
+        }
+        
         public Assessment build()
         {
             return new Assessment(this);

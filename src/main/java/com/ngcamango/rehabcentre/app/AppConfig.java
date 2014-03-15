@@ -6,10 +6,20 @@
 
 package com.ngcamango.rehabcentre.app;
 
+import com.ngcamango.rehabcentre.services.crud.Impl.PatientCrudServiceImpl;
+import com.ngcamango.rehabcentre.services.crud.PatientCrudService;
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.context.annotation.Bean;
+
 /**
  *
  * @author ngcamango
  */
+@Configurable
 public class AppConfig {
     
+    @Bean(name = "patientCrudService")
+    public  PatientCrudService getPatientCrudService(){
+        return new PatientCrudServiceImpl();
+    }
 }

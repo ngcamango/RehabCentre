@@ -53,6 +53,14 @@ public class Registration {
             return this;
         }
         
+        public Builder registration(Registration value){
+            name=value.getName();
+            surname= value.getSurname();
+            age=value.getAge();
+            diagnosis=value.getDiagnosis();
+            return this;
+        }
+        
         public Registration build()
         {
             return new Registration(this);

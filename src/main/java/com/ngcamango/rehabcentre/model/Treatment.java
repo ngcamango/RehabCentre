@@ -60,6 +60,15 @@ public class Treatment {
             return this;
         }
         
+        public Builder treatment(Treatment value){
+            name=value.getName();
+            surname= value.getSurname();
+            age=value.getAge();
+            diagnosis=value.getDiagnosis();
+            treatment=value.getTreatment();
+            return this;
+        }
+        
         public Treatment build()
         {
             return new Treatment(this);

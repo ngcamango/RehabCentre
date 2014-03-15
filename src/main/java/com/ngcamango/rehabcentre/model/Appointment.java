@@ -60,6 +60,15 @@ public class Appointment {
             return this;
         }
         
+        public Builder appointment(Appointment value){
+            name=value.getName();
+            surname= value.getSurname();
+            age=value.getAge();
+            relationship=value.getRelationship();
+            hours=value.getHours();
+            return this;
+        }
+        
         public Appointment build()
         {
             return new Appointment(this);
